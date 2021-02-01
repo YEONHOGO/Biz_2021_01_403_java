@@ -1,0 +1,46 @@
+내 프로젝트 github upload
+
+1. github repository 생성
+	https://github.com/YEONHOGO접속
+	New repository
+
+2. local 폴더 repository 선언
+= local repository 만들기
+	local 폴더에서 git bash here
+
+	git init
+
+3. config 설정
+= local repository와
+	remote repository의 권환,
+		보안설정
+
+		git config --local user.name YEONHOGO
+		git config --local user.email jayser0768@gmail.com
+
+4. remote 설정
+	
+	upload할 remote
+		repository주소 별명 설정
+		git remote add origin https://github.com/YEONHOGO/Biz_2021_01_403_java.git
+
+※ github 업로드 금지 설정
+로컬 폴더에 .gitianore 파일 생성
+	touch .gitianore
+	업로드 금지 목록작성
+
+5. 파일 add
+	git add .
+
+	= 현재 폴더의 모든 파일,폴더를
+	upload 하기 위해서 압축하라
+
+6. commit 설정
+	현재 시점에 업로드한 정보의
+	commit를 설정하는 것
+
+	git commit -m first
+
+7. push
+	
+	git push -u origin master
