@@ -23,10 +23,13 @@
 	upload할 remote
 		repository주소 별명 설정
 		git remote add origin https://github.com/YEONHOGO/Biz_2021_01_403_java.git
+		git remote add origin https://github.com/YEONHOGO/Biz_2021_01_403_java.git
+		git remote add origin https://github.com/YEONHOGO/git_test.git
+		git remote add origin https://github.com/YEONHOGO/git_test.git
 
 ※ github 업로드 금지 설정
-로컬 폴더에 .gitianore 파일 생성
-	touch .gitianore
+로컬 폴더에 .gitignore 파일 생성
+	touch .gitignore
 	업로드 금지 목록작성
 
 5. 파일 add
