@@ -1,0 +1,7 @@
+여러분의 git hub에
+git_test repository를 만들고
+git_test local 폴더를 upload 한다
+
+이때
+test, test1 폴더는 제외하고
+upload를 실행한다.
