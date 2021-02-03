@@ -1,0 +1,44 @@
+public static double add(double a, double b) {	//더하기
+		//더하기
+		double totle = a + b;
+		
+		System.out.println(totle);
+		
+		return 0;
+	}
+	
+	public static double div(double a, double b) {	//나누기
+		//나누기
+		double totle = a / b;
+		
+		System.out.println(totle);
+		
+		return 0;
+	}
+	
+	public static double sub(double a, double b) {	//빼기
+		//빼기
+		double totle = a - b;
+		
+		System.out.println(totle);
+		
+		return 0;
+	}
+	
+	public static double rem(double a, double b) {	//나머지
+		//나머지
+		double totle = a % b;
+		
+		System.out.println(totle);
+		
+		return 0;
+	}
+
+	public static double mul(double a, double b) {	// 곱하기
+		// 곱하기
+		double totle = a * b;
+	
+		System.out.println(totle);
+	
+		return 0;
+	}
