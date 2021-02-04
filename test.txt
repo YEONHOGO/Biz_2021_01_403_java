@@ -1,0 +1,13 @@
+Republic of Korea
+대한민국 만세
+우리나라만세
+viva Korea
+Welcame to Korea
+
+// 여기는 main() method
+public static void main(String args[]){
+
+	System.out.println(대한민국 만세);
+}
+
+// vi editor 이용하여 Text 문서를 작성하자
