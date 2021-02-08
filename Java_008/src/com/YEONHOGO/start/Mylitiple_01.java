@@ -6,13 +6,16 @@ public class Mylitiple_01 {
 		
 	
 		int intSum1 = 0;
+		int int3M = 0;
 
 		// 0 부터 99까지 - > 7 부터 106까지
 		for (int i = 0; i < 100; i++) {
 
 			int num1 = i + 7;
 			boolean bYes = (num1) % 3 == 0;
-
+			
+			// if(num % 3 == 0)
+			// if(bYes == true) 요거랑 똑같은거
 			if (bYes) {
 
 				intSum1 += num1;
@@ -26,7 +29,8 @@ public class Mylitiple_01 {
 		System.out.println("\t|===============================|");
 		System.out.println("\t|\t3의 배수 합 : " + intSum1 + "\t|");
 		System.out.println("\t|===============================|");
-
+		System.out.println();
+		
 		// 위에서 선언하고 사용했던 변수를 "재 사용" 하기
 		// 반드시 초기화(clear) 해야 한다.
 		intSum1 = 0;
@@ -44,6 +48,26 @@ public class Mylitiple_01 {
 			}
 			
 		}
+		for (int i = 0; i < 100; i++) {
+
+			int num1 = i + 7;
+			boolean bYes = (num1) % 3 == 0;
+			
+			// if(num % 3 == 0)
+			// if(bYes == true) 요거랑 똑같은거
+			if (bYes) {
+
+				int3M += num1;
+				System.out.println(num1 +"는 3의배수");
+
+			}
+
+		}	// for end
+		System.out.println();
+		System.out.println("\t|===============================|");
+		System.out.println("\t|\t3의 배수 합 : " + int3M + "\t|");
+		System.out.println("\t|===============================|");
+		System.out.println();
 		
 	}
 }
