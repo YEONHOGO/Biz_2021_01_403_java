@@ -1,6 +1,6 @@
 package com.YEONHOGO.start;
 
-public class Multiple_01 {
+public class Odd_Even_02 {
 
 	public static void main(String args[]) {
 
