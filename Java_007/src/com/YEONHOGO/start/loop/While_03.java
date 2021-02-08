@@ -5,7 +5,7 @@ public class While_03 {
 	public static void main(String[] args) {
 
 		int index = 0;
-		while (true) 
+		while (true) {
 			// 매우 불편한 코드
 			if(index % 3 > 0) {
 				System.out.println("3의 배수가 아님");
@@ -22,6 +22,7 @@ public class While_03 {
 			if (index > 1000) {
 				break;
 			}
+			
 		}
 
 	}
