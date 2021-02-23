@@ -22,7 +22,7 @@ public class HomeWork_01 {
 		
 		// 난수 생성 및 저장
 		for(int i = 0; i < intNums.length; i++) {
-			intNums[i] = rnd.nextInt();
+			intNums[i] = rnd.nextInt(100) + 2;
 		}// for end
 		
 		// 난수 비교 후 출력 문
