@@ -49,6 +49,7 @@ public class HomeWork_01 {
 			}
 			
 		}// for end
+		
 		// 난수의 합출력
 		System.out.printf("난수의 합 : %d\n",intSum);
 	}// main end
