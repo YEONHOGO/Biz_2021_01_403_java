@@ -17,37 +17,53 @@ public class HomeWork_01 {
 		
 		Random rnd = new Random();
 		
-		int[] rndNums = new int[10]; // 100개의 난수가 들어갈 배열
-		final int rndMax = 100; // 난수의 최대치
-		int rndSum = 0; // 난수중에 소수인 값들의 합
+		int[] intRndNums = new int[100]; // 100개의 난수가 들어갈 배열
+		final int intRndMax = 100; // 난수의 최대치
+		int intRndSum = 0; // 난수중에 소수인 값들의 합
+		int intPrimeCount = 0;
 		
 		// 난수 생성 및 저장
-		for(int i = 0; i < rndNums.length; i++) {
-			rndNums[i] = rnd.nextInt(rndMax) + 2;
+		// 0부터 99까지의 난수를 생성
+		// 생성된 난수에 2를 더한다.
+		// 최종 생성된 난수는 2 ~ 101 이다.
+		for(int i = 0; i < intRndNums.length; i++) {
+			intRndNums[i] = rnd.nextInt(intRndMax) + 2;
 		}// for end
+		
+		// 제목 출력
+		System.out.println("============================");
+		System.out.println("\t소수 리스트");
+		System.out.println("----------------------------");
 		
 		// 난수 비교 후 출력 문
-		for(int i = 0; i < rndNums.length; i++) {
+				// rndNums에 들어있는 수가 소수이면
+				// 그대로 반환한다.
+				// 그러나 소수가 아닌경우에는 -1을 반환한다.
+		for(int i = 0; i < intRndNums.length; i++) {
 			
-			int result = psV2.prime(rndNums[i]);
+			int result = psV2.prime(intRndNums[i]);
 			
 			if(result > 0) {
-				System.out.printf("소수 %d\n", rndNums[i]);
+				System.out.printf("소수 %d\n", intRndNums[i]);
+			}// if end
+			
+		}// for end
+		System.out.println("============================");
+		
+		// 소수의 합계산 및 소수의 개수 세기
+		for(int i = 0; i < intRndNums.length; i++) {
+			int result = psV2.prime(intRndNums[i]);
+			//소수 개수 세기
+			if(result > 0) {
+				intRndSum += intRndNums[i];
+				intPrimeCount++;
 			}// if end
 			
 		}// for end
 		
-		// 난수의 합계산
-		for(int i = 0; i < rndNums.length; i++) {
-			int result = psV2.prime(rndNums[i]);
-			
-			if(result > 0) {
-				rndSum += rndNums[i];
-			}// if end
-			
-		}// for end
-		
-		// 난수의 합출력
-		System.out.printf("난수의 합 : %d\n",rndSum);
+		// 소수의 합 및 난수의 갯수 출력
+		System.out.printf("난수의 합 : %d\n",intRndSum);
+		System.out.printf("난수의 개수 : %d\n",intPrimeCount);
+		System.out.println("============================");
 	}// main end
 }// class end
