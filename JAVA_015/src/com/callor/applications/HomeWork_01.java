@@ -17,36 +17,37 @@ public class HomeWork_01 {
 		
 		Random rnd = new Random();
 		
-		int[] intNums = new int[10];
-		int intSum = 0;
+		int[] rndNums = new int[10]; // 100개의 난수가 들어갈 배열
+		final int rndMax = 100; // 난수의 최대치
+		int rndSum = 0; // 난수중에 소수인 값들의 합
 		
 		// 난수 생성 및 저장
-		for(int i = 0; i < intNums.length; i++) {
-			intNums[i] = rnd.nextInt(100) + 2;
+		for(int i = 0; i < rndNums.length; i++) {
+			rndNums[i] = rnd.nextInt(rndMax) + 2;
 		}// for end
 		
 		// 난수 비교 후 출력 문
-		for(int i = 0; i < intNums.length; i++) {
+		for(int i = 0; i < rndNums.length; i++) {
 			
-			int result = psV2.prime(intNums[i]);
+			int result = psV2.prime(rndNums[i]);
 			
 			if(result > 0) {
-				System.out.printf("소수 %d\n", intNums[i]);
+				System.out.printf("소수 %d\n", rndNums[i]);
 			}// if end
 			
 		}// for end
 		
 		// 난수의 합계산
-		for(int i = 0; i < intNums.length; i++) {
-			int result = psV2.prime(intNums[i]);
+		for(int i = 0; i < rndNums.length; i++) {
+			int result = psV2.prime(rndNums[i]);
 			
 			if(result > 0) {
-				intSum += intNums[i];
+				rndSum += rndNums[i];
 			}// if end
 			
 		}// for end
 		
 		// 난수의 합출력
-		System.out.printf("난수의 합 : %d\n",intSum);
+		System.out.printf("난수의 합 : %d\n",rndSum);
 	}// main end
 }// class end
