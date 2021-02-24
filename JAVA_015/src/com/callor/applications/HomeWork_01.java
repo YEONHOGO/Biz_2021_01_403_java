@@ -17,7 +17,7 @@ public class HomeWork_01 {
 		
 		Random rnd = new Random();
 		
-		int[] intNums = new int[100];
+		int[] intNums = new int[10];
 		int intSum = 0;
 		
 		// 난수 생성 및 저장
@@ -30,11 +30,9 @@ public class HomeWork_01 {
 			
 			int result = psV2.prime(intNums[i]);
 			
-			if(result == -1) {
-				continue;
-			} else {
+			if(result > 0) {
 				System.out.printf("소수 %d\n", intNums[i]);
-			}
+			}// if end
 			
 		}// for end
 		
@@ -42,11 +40,9 @@ public class HomeWork_01 {
 		for(int i = 0; i < intNums.length; i++) {
 			int result = psV2.prime(intNums[i]);
 			
-			if(result == -1) {
-				continue;
-			} else {
+			if(result > 0) {
 				intSum += intNums[i];
-			}
+			}// if end
 			
 		}// for end
 		
