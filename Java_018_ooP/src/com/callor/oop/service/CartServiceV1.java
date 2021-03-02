@@ -8,6 +8,7 @@ import com.callor.oop.model.CartVO;
 
 public class CartServiceV1 {
 
+	// 클래스 영역
 	private List<CartVO> cartList = new ArrayList<CartVO>();;
 	private CartVO cartVO;
 	
