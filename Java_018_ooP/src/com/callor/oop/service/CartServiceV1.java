@@ -27,6 +27,7 @@ public class CartServiceV1 {
 		System.out.print("상품명>> ");
 		String strPName = scan.nextLine();
 		
+		// 수량정보 입력
 		int intQty = 0;
 		while(true) {
 			System.out.print("수량>> ");
@@ -43,6 +44,7 @@ public class CartServiceV1 {
 			}
 		}// while end
 
+		// 단가정보 입력
 		int intPrice = 0;
 		while(true) {
 			System.out.print("단가>> ");
