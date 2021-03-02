@@ -1,6 +1,6 @@
 package com.callor.oop.controller;
 
-import com.callor.oop.service.CartServiceV1;
+import com.callor.oop.service.CartServiceV2;
 
 /*
  * 1. CartServiceV1 클래스에
@@ -21,15 +21,15 @@ import com.callor.oop.service.CartServiceV1;
  * Service 등 모듈클래스를 객체로 선언하고
  * 모듈클래스의 method들을 호출하는 일만 수행
  */
-public class CartControllerV5 {
+public class CartControllerV6 {
 
-	// 자작
+	// 수업용
 	public static void main(String[] args) {
 		
-		CartServiceV1 csV1 = new CartServiceV1();
+		CartServiceV2 csV2 = new CartServiceV2();
 		
-		csV1.inputCart();
-		csV1.printCartList();
+		csV2.inputCart();
+		csV2.printCart();
 		
 	}// main end
 }// class end
