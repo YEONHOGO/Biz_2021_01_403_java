@@ -43,7 +43,7 @@ public class CartServiceImplV1 implements CartService{
 			try {
 				intQty = Integer.valueOf(strQty);
 				// 입력된 값이 1 이상
-				if(intQty > 0) {
+				if(intQty >= 1) {
 					break;
 				} else {
 					System.out.println("수량은 1 이상으로 입력하세요");
@@ -64,7 +64,7 @@ public class CartServiceImplV1 implements CartService{
 			try {
 				intPrice = Integer.valueOf(strPrice);
 				// 입력된 값이 1 이상
-				if(intPrice > 0) {
+				if(intPrice >= 1) {
 					break;
 				} else {
 					System.out.println("단가는 1 이상으로 입력하세요");
