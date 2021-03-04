@@ -2,7 +2,7 @@ package com.callor.shop;
 
 import com.callor.shop.service.CartService;
 import com.callor.shop.service.MenuService;
-import com.callor.shop.serviceImpl.CartServiceImplV1;
+import com.callor.shop.serviceImpl.CartServiceImplV2;
 import com.callor.shop.serviceImpl.MenuServiceImplV1;
 
 public class Strart {
@@ -10,7 +10,7 @@ public class Strart {
 	public static void main(String[] args) {
 		
 		MenuService mService = new MenuServiceImplV1();
-		CartService cService = new CartServiceImplV1();
+		CartService cService = new CartServiceImplV2();
 		
 		while(true) {
 			Integer menu = mService.selectMenu();

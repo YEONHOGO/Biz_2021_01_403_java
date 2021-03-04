@@ -7,20 +7,23 @@ import java.util.Scanner;
 import com.callor.shop.model.CartVO;
 import com.callor.shop.service.CartService;
 
-public class CartServiceImplV1 implements CartService{
+public class CartServiceImplV2 implements CartService{
 
 	// 멤버
+	// Scanner 객체를 사용해서 scan을 선언
 	private Scanner scan;
 	private List<CartVO> cartList;
+	
 
 	// 생성자
-	public CartServiceImplV1() {
+	public CartServiceImplV2() {
 		scan = new Scanner(System.in);
 		cartList = new ArrayList<CartVO>();
 	}
 	
 	// 카트리스트 입력
 	public void inputCart() {
+		
 		
 		// 제목 출력
 		System.out.println("=======================");
@@ -85,6 +88,7 @@ public class CartServiceImplV1 implements CartService{
 		// 카트리스트 정보 입력
 		cartList.add(cartVO);
 		
+		
 	}// inputCart end
 
 	// 카트 전체리스트 출력
@@ -101,13 +105,7 @@ public class CartServiceImplV1 implements CartService{
 		
 		// 내용 출력
 		for(int i = 0; i < nsize; i++) {
-			System.out.printf("%s\t%s\t\t%d\t%d\t%d\n",
-					cartList.get(i).getUserName(),
-					cartList.get(i).getProductName(),
-					cartList.get(i).getPrice(),
-					cartList.get(i).getQty(),
-					cartList.get(i).getTotal());
-
+			printDomain(i);
 			
 			// total 구하기
 			total += cartList.get(i).getTotal();
@@ -168,13 +166,7 @@ public class CartServiceImplV1 implements CartService{
 			
 			// 입력된 이름과 장바구니 내의 구매자 이름을 비교
 			if(cartList.get(i).getUserName().equals(strUserName)) {
-				System.out.printf("%s\t%s\t\t%d\t%d\t%d\n",
-						cartList.get(i).getUserName(),
-						cartList.get(i).getProductName(),
-						cartList.get(i).getPrice(),
-						cartList.get(i).getQty(),
-						cartList.get(i).getTotal());
-
+				printDomain(i);
 				
 				// count
 				count++;
@@ -192,5 +184,14 @@ public class CartServiceImplV1 implements CartService{
 
 	}// cartByBuyer end, 구매자별 카트리스트 출력
 	
+	public void printDomain(int i) {
+		
+		System.out.printf("%s\t%s\t\t%d\t%d\t%d\n",
+				cartList.get(i).getUserName(),
+				cartList.get(i).getProductName(),
+				cartList.get(i).getPrice(),
+				cartList.get(i).getQty(),
+				cartList.get(i).getTotal());
+	}// printDomain end
 
 }// class end
