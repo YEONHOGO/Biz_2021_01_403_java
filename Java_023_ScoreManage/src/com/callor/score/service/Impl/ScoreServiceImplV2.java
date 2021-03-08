@@ -14,13 +14,13 @@ import com.callor.score.model.ScoreVO;
 import com.callor.score.service.ScoreService;
 import com.callor.score.valeus.Values;
 
-public class ScoreServiceImplV1 implements ScoreService{
+public class ScoreServiceImplV2 implements ScoreService{
 
 	private List<ScoreVO> scoreList;
 	private String fileName;
 	
 	// 생성자
-	public ScoreServiceImplV1() {
+	public ScoreServiceImplV2() {
 		scoreList = new ArrayList<ScoreVO>();
 		fileName = "src/com/callor/score/score.txt";
 	}
@@ -74,12 +74,11 @@ public class ScoreServiceImplV1 implements ScoreService{
 
 	// 파일을 읽어드려서 출력하는 method
 	public void loadScoreFromFile() {
-		List<String> scoreString = new ArrayList<String>();
 		scoreList = new ArrayList<ScoreVO>();
 		FileReader fileReader;
 		BufferedReader buffer;
 		
-		// 파일을 읽어 들여서 '한줄씩'  scoreString에 담기
+		// 파일의 내용을 한줄씩 읽어들여서 split":"'로 분류  scoreString에 담기
 		try {
 			fileReader = new FileReader(fileName);
 			buffer = new BufferedReader(fileReader);
@@ -89,7 +88,17 @@ public class ScoreServiceImplV1 implements ScoreService{
 				if(str == null) {
 					break;
 				}
-				scoreString.add(str);
+				String[] scores = str.split(":");
+				ScoreVO scoreVO = new ScoreVO();
+				
+				scoreVO.setKor(Integer.valueOf(scores[0]));
+				scoreVO.setEng(Integer.valueOf(scores[1]));
+				scoreVO.setMath(Integer.valueOf(scores[2]));
+				scoreVO.setMusic(Integer.valueOf(scores[3]));
+				scoreVO.setHistory(Integer.valueOf(scores[4]));
+				
+				scoreList.add(scoreVO);
+		
 			}
 			buffer.close();
 			fileReader.close();
@@ -99,18 +108,6 @@ public class ScoreServiceImplV1 implements ScoreService{
 			e.printStackTrace();
 		}
 		
-		// 한줄씩 읽어 들인 값들을 분류하기
-		for(String str : scoreString) {
-			String[] scores = str.split(":");
-			ScoreVO scoreVO = new ScoreVO();
-			scoreVO.setKor(Integer.valueOf(scores[0]));
-			scoreVO.setEng(Integer.valueOf(scores[1]));
-			scoreVO.setMath(Integer.valueOf(scores[2]));
-			scoreVO.setMusic(Integer.valueOf(scores[3]));
-			scoreVO.setHistory(Integer.valueOf(scores[4]));
-			
-			scoreList.add(scoreVO);
-		}
 		
 		// 분류한 성적들의 합계, 평균 구하기
 		for(ScoreVO vo : scoreList) {
@@ -152,7 +149,6 @@ public class ScoreServiceImplV1 implements ScoreService{
 		// 마무리
 		System.out.println(Values.dLine);
 		
-		scoreString = new ArrayList<String>();
 		scoreList = new ArrayList<ScoreVO>();
 
 	}// loadScoreFromFile end

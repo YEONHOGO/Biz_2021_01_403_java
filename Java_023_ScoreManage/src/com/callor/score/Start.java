@@ -4,6 +4,7 @@ import com.callor.score.service.MenuService;
 import com.callor.score.service.ScoreService;
 import com.callor.score.service.Impl.MenuServiceImplV1;
 import com.callor.score.service.Impl.ScoreServiceImplV1;
+import com.callor.score.service.Impl.ScoreServiceImplV2;
 import com.callor.score.valeus.Values;
 
 public class Start {
