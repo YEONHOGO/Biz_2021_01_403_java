@@ -23,6 +23,7 @@ public class IolistServiceImplV1 implements IoListService{
 	
 	// 파일을 읽어들이기
 	public void loadFromFile() {
+		ioList.removeAll(ioList);
 		String fileName = "src/com/callor/iolist/애입매출데이터.txt";
 		FileReader fileReader = null;
 		BufferedReader buffer = null;
@@ -80,7 +81,7 @@ public class IolistServiceImplV1 implements IoListService{
 			} else {
 				System.out.println("구분에 오류가 있습니다.");
 			}
-		}
+		}// end for
 			
 			
 		
@@ -94,7 +95,7 @@ public class IolistServiceImplV1 implements IoListService{
 		this.divitionExe();
 		
 		System.out.println(Values.dLine);
-		System.out.println("거래일자\t거래처\t\t\t\t\t상품이름\t\t\t\t매입금액\t판매금액");
+		System.out.println("거래일자\t거래처\t\t\t\t\t상품이름\t\t\t\t\t\t매입금액\t판매금액");
 		System.out.println(Values.sLine);
 		
 		int nSize = ioList.size();

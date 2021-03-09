@@ -2,7 +2,7 @@ package com.callor.iolist.model;
 
 public class IoListVO {
 
-	private String date;				// 걸래 일자
+	private String date;				// 거래 일자
 	private String produntName;			// 상품명
 	private String acCount;				// 거래처
 	private String representativeName; 	// 대표자명
