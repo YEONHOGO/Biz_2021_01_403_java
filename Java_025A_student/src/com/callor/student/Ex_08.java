@@ -20,7 +20,8 @@ public class Ex_08 {
 		
 		
 		for(int i = 0 ; i < 100 ; i++) {
-			nums[i] = rnd.nextInt(90) + 11;
+			nums[i] = rnd.nextInt(91) + 10;
+			System.out.println(nums[i]);
 		}
 		
 		for(int i = 0 ; i < 100 ; i++) {
